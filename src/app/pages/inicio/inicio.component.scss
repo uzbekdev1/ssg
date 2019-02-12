@@ -1,0 +1,116 @@
+.titulo-item {
+	font-size: 24px;
+	margin-bottom: 3px;
+	color: #4F59CC;
+	text-align: center;
+}
+
+.inicio-subtitulo {
+	font-size: 35px;
+	text-align: left;
+	color: #565656;	
+}
+
+.innovar {
+	position: relative;
+	margin-top: 30px;
+}
+
+.img-background-innovar {
+	top: 255px;
+	left: 300px;
+	position: absolute;
+	z-index: 1;
+}
+
+.innovar-items {
+	position: relative;
+	z-index: 2;
+	margin: 0px 100px;
+}
+
+.innovar-items-lt-md {
+	position: relative;
+	z-index: 2;
+	margin: 0px 10px;
+}
+
+.contacto {
+	position: relative;
+	margin-top: 30px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.img-background-contacto {
+	top: -435px;
+	left: 0;
+	position: absolute;
+	z-index: 3;
+}
+
+.form-contacto {
+	position: relative;
+	z-index: 4;
+}
+
+.contactanos {
+	color: #3D628C;
+	font-size: 35px;
+	text-align: center;
+	border-color: #3D628C;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container > * {
+  width: 100%;
+}
+
+.telefono {
+	font-weight: bold;
+}
+
+.label-contactanos {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.btn-enviar {
+	padding: 0px 30px;
+}
+
+.inicio-titulo {
+	font-family: riftregular;
+	font-size: 70px;
+	text-align: center;
+}
+
+.inicio-titulo-lt-md {
+	font-family: riftregular;
+	font-size: 45px;
+	text-align: center;
+}
+
+.inicio-subtitulo {
+	font-size: 25px;
+	text-align: center;
+	color: #565656; 	
+}
+
+.inicio-subtitulo-lt-md {
+	font-size: 17px;
+	text-align: center;
+	color: #565656; 
+}
+
+.inicio-futuro {
+	margin: 0px 100px;
+}
+
+.inicio-futuro-lt-md {
+	margin: 0px 10px;
+}

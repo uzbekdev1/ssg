@@ -1,0 +1,74 @@
+<div id="main" perfectScrollbar (psScrollY)="onPsScrollY($event)" class="h-100">
+
+    <header class="header" [class.over]="showInfoContent">
+        <mat-toolbar class="top-toolbar" >
+            <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex> 
+                &nbsp;&nbsp;&nbsp;          
+                <div fxLayout="row" fxLayoutAlign="center center">               
+                    <a routerLink="/" fxLayout="row" fxLayoutAlign="start center"  ngClass.xs="mobile" (click)="closeSubMenus()">
+                        <img src="assets/img/png-version-1.png" width="220px">
+                        
+                    </a>
+                </div> 
+                <div fxLayout="row" fxLayoutAlign="start center" class="w-100"> 
+                                                         
+                </div>          
+                <div fxLayout="row" fxLayoutAlign="end center">
+                        <a [routerLink]="['/inicio']"><button mat-button >Inicio</button></a>
+                    <button mat-button [matMenuTriggerFor]="menu">Servicios</button>
+                    <mat-menu #menu="matMenu">
+                            
+                        <a [routerLink]="['/desarrollo-software']">
+                            <button mat-button>Desarrollo de Software</button>
+                        </a>
+                        <button mat-menu-item>Aplicaciones Móviles</button>
+                        <button mat-menu-item>Diseño de páginas web</button>
+                        <button mat-menu-item>Consultoría de IT</button>
+                        <button mat-menu-item>Soporte Técnico</button>
+                    </mat-menu>&nbsp;
+                    <a [routerLink]="['/power']"><button mat-button >Star Power POS</button></a>
+                    <a [routerLink]="['/nosotros']"><button mat-button > 
+                        <span style="color: '{{ style3 }}' ">Nosotros</span>  
+                         </button></a>
+                    <a [routerLink]="['/contacto']"><button mat-button >Contacto</button></a>
+                    <div fxLayout="row" fxLayoutAlign="start center" fxShow="false" fxShow.gt-xs class="search-bar">
+                        <form method="get">
+                            <input type="text" placeholder="Type to search" class="mat-elevation-z3"  [class.show]="toggleSearchBar">
+                            <button mat-icon-button (click)="toggleSearchBar = !toggleSearchBar" type="button">
+                                <mat-icon>search</mat-icon>
+                            </button> 
+                        </form>
+                    </div>
+                </div>
+                &nbsp;&nbsp;&nbsp;
+            </div>               
+        </mat-toolbar>
+    </header>
+
+    <mat-drawer-container class="page-wrapper">
+          
+        <mat-drawer-content>
+                    <router-outlet></router-outlet> 
+
+        </mat-drawer-content>    
+        
+        <mat-drawer #options position="end" class="options">
+            
+        </mat-drawer>
+    
+    </mat-drawer-container>
+
+    <div fxLayout="row" fxLayoutAlign="center center" class="options-icon" (click)="options.toggle()">
+        <mat-icon>settings</mat-icon>
+    </div>
+
+    <div #backToTop fxLayout="row" fxLayoutAlign="center center" class="back-to-top" (click)="scrollToTop()">
+        <mat-icon>arrow_upward</mat-icon>
+    </div>
+
+    <mat-toolbar color="primary" class="footer" [class.full-width]="!showSidenav">
+        <span style="margin-right: 30px;">© Copyright 2019 Star Software Group</span> 
+        <mat-icon style="margin-right: 5px;">phone</mat-icon> <span style="margin-right: 30px;"> +507 6472-9648 </span> 
+        <mat-icon style="margin-right: 5px;">mail</mat-icon> <span style="margin-right: 30px;"> info@starsoftwaregroup.com </span>
+    </mat-toolbar>
+</div>
